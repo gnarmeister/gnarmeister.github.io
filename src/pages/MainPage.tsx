@@ -1,10 +1,10 @@
 import Main from "../components/Main"
 import { useState } from "react"
-import { WEATHER } from "../utils/constants"
+import { Weather } from "../utils/constants"
 
 const MainPage = () => {
-	const [weather, setWeather] = useState(WEATHER.clear)
+	const [weather, setWeather] = useState<Weather>(Weather.clear)
 
-	return <Main weather={weather} />
+	return <Main weather={weather} setWeather={setWeather} />
 }
 export default MainPage
